@@ -43,7 +43,7 @@ public class Complex {
         c3.addComplexNo(c1, c2);
 
         System.out.println("Sum of Given Complex Number is :");
-        System.out.println(+c3.realNo+" "+c3.imgNo+" + * i");
+        System.out.println(c3.realNo+" + "+c3.imgNo+" * i");
 
         sc.close();
 

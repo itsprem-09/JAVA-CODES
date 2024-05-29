@@ -17,20 +17,7 @@ class Student
         this.grade_obtained = new String[no_of_subject_registrated];
     }
 
-    public void insertSubjectData(){
-        Scanner sc = new Scanner(System.in);
-        for(int i = 0; i < no_of_subject_registrated;i++ ){
-                System.out.println("Enter Subject Code : ");
-                this.subject_code[i] = sc.next();
-
-                System.out.println("Enter Subject Credit : ");
-                this.subject_credits[i] = sc.nextInt();
-
-                System.out.println("Enter Subject Grade Obtained : ");
-                this.grade_obtained[i] = sc.next();
-
-        }
-    }
+    
     public double calculate_spi(){
         int totalCredits = 0;
         int sum = 0;
@@ -84,7 +71,17 @@ public class StudentDemo {
             System.out.print("Enter no of Subject Registerd : ");
             int no_of_subject_registrated = sc.nextInt();
             s[i] = new Student(id_no, no_of_subject_registrated);
-            s[i].insertSubjectData();
+            for(int j = 0; j < no_of_subject_registrated;j++ ){
+                System.out.println("Enter Subject Code : ");
+                s[i].subject_code[j] = sc.next();
+
+                System.out.println("Enter Subject Credit : ");
+                s[i].subject_credits[j] = sc.nextInt();
+
+                System.out.println("Enter Subject Grade Obtained : ");
+                s[i].grade_obtained[j] = sc.next();
+
+            }
             System.out.println("SPI of Student "+(i+1)+" : "+s[i].calculate_spi());
 
         }

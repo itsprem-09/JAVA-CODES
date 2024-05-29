@@ -12,7 +12,7 @@ public class Replace {
 
             Scanner sc = new Scanner(f1);
             String[] str = null;
-            int i=0;
+            // int i=0;
             while (sc.hasNextLine()) {
                 str = sc.nextLine().split(" ");
                 for (int j = 0; j < str.length; j++) {

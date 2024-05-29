@@ -1,6 +1,13 @@
+import java.util.Scanner;
+
 class Odd implements Runnable{
+    int n;
+
+    public Odd(int n){
+        this.n = n;
+    }
     public void run(){
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 1; i <= n; i++) {
             if (i%2!=0) {
                 System.out.println(i+" ");
             }
@@ -14,8 +21,13 @@ class Odd implements Runnable{
     }
 }
 class Even implements Runnable{
+    int n;
+
+    public Even(int n){
+        this.n = n;
+    }
     public void run(){
-        for (int i = 1; i <= 20; i++) {
+        for (int i = 1; i <= n; i++) {
             if (i%2==0) {
                 System.out.println(i+" ");
             }
@@ -32,8 +44,11 @@ class Even implements Runnable{
 
 public class OddEven {
     public static void main(String[] args) {
-        Thread myThread1 = new Thread(new Odd());
-        Thread myThread2 = new Thread(new Even());
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Number :");
+        int n = sc.nextInt();
+        Thread myThread1 = new Thread(new Odd(n));
+        Thread myThread2 = new Thread(new Even(n));
         myThread1.start();
         myThread2.start();
     }

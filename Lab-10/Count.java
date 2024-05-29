@@ -3,10 +3,11 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Count {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args)  {
         File f1 = new File("abc.txt");
         int wordCount = 0;
         int lineCount = 0;
+        
         try {
             String str1 = "";
             String str2 = "";
@@ -25,7 +26,8 @@ public class Count {
                 wordCount++;
             }
             sc.close();
-            System.out.println("Lines = "+lineCount);
+            System.out.println("Lines = "+line
+            Count);
             System.out.println("Char = "+(int)f1.length());
             System.out.println("Words = "+wordCount);
             
